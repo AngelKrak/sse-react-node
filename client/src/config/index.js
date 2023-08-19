@@ -10,7 +10,7 @@ const isLocalhost = Boolean(
     )
 );
 
-const SERVER_URL = isLocalhost
+export const SERVER_URL = isLocalhost
   ? "http://localhost:5000"
   : "https://api.sse.techfortified.com";
 
