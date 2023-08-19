@@ -2,12 +2,13 @@
   "name": "nodejs",
   "version": "1.0.0",
   "description": "",
-	"proxy": "http://localhost:5000",
+  "proxy": "http://localhost:5000",
   "scripts": {
+		"init": "npm install && cd client && npm install && cd ../server && npm install",
     "client": "cd ./client && HOST=0.0.0.0 npm start",
     "server": "cd ./server && nodemon --watch",
     "start": "npm-run-all --parallel client server",
-		"dev": "npm start"
+    "dev": "npm start"
   },
   "keywords": [],
   "author": "Angel Ramirez",
