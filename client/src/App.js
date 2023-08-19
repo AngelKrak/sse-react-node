@@ -4,6 +4,7 @@ import AddPostModal from "./components/AddPostModal";
 import { MDBContainer, MDBBtn } from "mdb-react-ui-kit";
 import { ToastContainer } from "react-toastify";
 import { useAppContext } from "./context";
+import { SERVER_URL } from "./config";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "react-toastify/dist/ReactToastify.min.css";
 import "./App.css";
@@ -21,6 +22,7 @@ function App() {
           <h2 className="mr-2">SSE Realtime Newsfeed</h2>
           <MDBBtn onClick={() => toggleShow()}>Add Post</MDBBtn>
         </div>
+        <p>{SERVER_URL}</p>
       </header>
       {!isError && (
         <h2 className="mt-3 mb-3">
