@@ -16,7 +16,7 @@
         {
           "id": "codesandbox.browser",
           "options": {
-            "port": 3000,
+            "port": 5000,
             "url": "https://zfvy4-3000.sse.codesandbox.io"
           },
           "closeable": true
