@@ -1,4 +1,4 @@
-const { nanoid } = require("nanoid");
+const { v4: uuidv4 } = require('uuid');
 const PostModel = require("../models/postModel");
 
 const getPostsService = async () => {
@@ -53,7 +53,7 @@ const updatePostReaction = async (postId, userId) => {
 
 const createNotification = ({ postId, authorId, userId }) => {
   return {
-    id: nanoid(),
+    id: uuidv4(),
     userId: authorId,
     title: `Your post has been liked by user ${userId}`,
     type: "post",
