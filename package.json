@@ -2,7 +2,6 @@
   "name": "nodejs",
   "version": "1.0.0",
   "description": "",
-  "proxy": "http://localhost:5000",
   "scripts": {
 		"init": "npm install && cd client && npm install && cd ../server && npm install",
     "client": "cd ./client && HOST=0.0.0.0 npm start",
