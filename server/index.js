@@ -12,6 +12,7 @@ const sseRoute = require("./routes/sse.route");
 
 const { port, origin } = config;
 const app = express();
+
 // config express app
 app.use(cors({ origin, credentials: true }));
 app.use(helmet());
@@ -36,6 +37,11 @@ const startServer = () => {
 }
 
 (async () => {
-  await mongodbConnection();
-  startServer();
+  try {
+    await mongodbConnection();
+    startServer();
+  } catch (err) {
+    console.error(err);
+    startServer();
+  }
 })();
