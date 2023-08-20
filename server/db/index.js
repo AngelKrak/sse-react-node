@@ -11,7 +11,7 @@ const connect = async () => {
     return response;
   } catch (err) {
     console.error('error: ', err?.message || err);
-    return error;
+    return err;
   }
 };
 
