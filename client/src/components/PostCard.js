@@ -25,7 +25,7 @@ const PostCard = ({ post }) => {
         payload: { id: _post._id, likers: [..._post.likers, userId] },
       });
       await postReaction({ userId, id: _post._id });
-    } catch (error) {}
+    } catch (error) { }
   };
 
   return (
@@ -33,7 +33,7 @@ const PostCard = ({ post }) => {
       <MDBCardImage
         src={post.photo}
         position="top"
-        style={{ maxHeight: 350, objectFit: "cover" }}
+        style={{ backgroundColor: "#000", minHeight: 120, maxHeight: 350, objectFit: "cover" }}
       />
       <MDBCardBody>
         <MDBCardTitle
@@ -52,7 +52,7 @@ const PostCard = ({ post }) => {
       <MDBCardFooter>
         {post.likers.includes(userId) ? (
           <>
-            {post.likers.length}
+            <span className="d-inline-block me-2">{post.likers.length}</span>
             <MDBIcon
               className="likeBtn"
               size="lg"
@@ -63,7 +63,7 @@ const PostCard = ({ post }) => {
           </>
         ) : (
           <>
-            {post.likers.length}
+            <span className="d-inline-block me-2">{post.likers.length}</span>
             <MDBIcon
               className="likeBtn"
               size="lg"

@@ -4,7 +4,6 @@ import AddPostModal from "./components/AddPostModal";
 import { MDBContainer, MDBBtn } from "mdb-react-ui-kit";
 import { ToastContainer } from "react-toastify";
 import { useAppContext } from "./context";
-import { SERVER_URL } from "./config";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "react-toastify/dist/ReactToastify.min.css";
 import "./App.css";
@@ -17,12 +16,11 @@ function App() {
   const toggleShow = () => setIsOpen(!isOpen);
   return (
     <div className="App">
-      <header className="App-header">
-        <div className="d-flex justify-content-between">
-          <h2 className="mr-2">SSE Realtime Newsfeed</h2>
+      <header className="App-header px-5 py-3">
+        <div className="d-flex justify-content-between gap-4 w-100">
+          <h2 className="ms-2">SSE Realtime [React & Node JS]</h2>
           <MDBBtn onClick={() => toggleShow()}>Add Post</MDBBtn>
         </div>
-        <p>{SERVER_URL}</p>
       </header>
       {!isError && (
         <h2 className="mt-3 mb-3">

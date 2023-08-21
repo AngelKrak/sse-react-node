@@ -12,7 +12,7 @@ const isLocalhost = Boolean(
 
 export const SERVER_URL = isLocalhost
   ? "http://localhost:5000"
-  : "https://api.sse.techfortified.com";
+  : "http://localhost:5000";
 
 export const Axios = axios.create({
   baseURL: `${SERVER_URL}/api`,

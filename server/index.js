@@ -30,8 +30,7 @@ app.get("/", (req, res) => {
 });
 
 const startServer = () => {
-  const server = http.createServer(app);
-  server.listen(port, () => {
+  app.listen(port, '0.0.0.0', () => {
     console.log(`Server running on http://localhost:${port}`);
   });
 }

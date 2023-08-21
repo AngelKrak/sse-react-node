@@ -74,7 +74,7 @@ const AddPostModal = ({ isOpen, toggleShow }) => {
           <MDBModalBody>
             <form>
               <div className="mb-2">
-                <label htmlFor="title">Post title</label>
+                <label htmlFor="title" className="mb-1">Post title</label>
                 <MDBInput
                   value={title}
                   onChange={handleTitleInput}
@@ -82,7 +82,7 @@ const AddPostModal = ({ isOpen, toggleShow }) => {
                 />
               </div>
               <div className="mb-2">
-                <label htmlFor="image">Post image link</label>
+                <label htmlFor="image" className="mb-1">Post image link</label>
                 <MDBInput
                   value={image}
                   onChange={handleImageInput}
@@ -90,7 +90,7 @@ const AddPostModal = ({ isOpen, toggleShow }) => {
                 />
               </div>
               <div className="mb-2">
-                <label htmlFor="content">Post content</label>
+                <label htmlFor="content" className="mb-1">Post content</label>
                 <MDBInput
                   value={content}
                   onChange={handleContentInput}
@@ -98,7 +98,7 @@ const AddPostModal = ({ isOpen, toggleShow }) => {
                 />
               </div>
               <div className="d-block text-center">
-                <p className="info">{message}</p>
+                <p className="info mb-1">{message}</p>
                 {loading && <MDBSpinner />}
               </div>
             </form>
