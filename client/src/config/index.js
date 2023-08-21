@@ -12,7 +12,7 @@ const isLocalhost = Boolean(
 
 export const SERVER_URL = isLocalhost
   ? "http://localhost:5000"
-  : "http://localhost:5000";
+  : "https://stackblitzstarters92bguq-objp--5000--ba0db7b1.local-credentialless.webcontainer.io";
 
 export const Axios = axios.create({
   baseURL: `${SERVER_URL}/api`,
