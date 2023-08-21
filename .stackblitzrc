@@ -1,6 +1,6 @@
 {
   "installDependencies": false,
-  "startCommand": "npm init && npm start",
+  "startCommand": "npm run init && npm start",
   "env": {
     "NODE_ENV": "development",
     "PORT": 5000,
